@@ -6,6 +6,7 @@ export default function Home() {
       <SignedIn>
         <UserProfile routing="hash" />
       </SignedIn>
+      <span>Test Commit</span>
     </main>
   );
 }
