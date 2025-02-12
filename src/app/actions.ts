@@ -40,7 +40,12 @@ export const getUsersSpotifyCurrentPlaying = async () => {
 
   const data = await response.json()
 
+  const songName = data.item.name
+  const songArtist = data.item.artists.map((artist: any) => artist.name).join(", ")
+
   return {
+    songName,
+    songArtist,
     data
   }
 }

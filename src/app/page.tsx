@@ -9,8 +9,8 @@ export default function Home() {
       <SignedIn>
         <UserProfile routing="hash" />
         <div>
-          <button onClick={() => getUsersOauthToken("oauth_spotify")}>Get users spotify token</button> 
-          <button onClick={() => getUsersSpotifyCurrentPlaying()}>Get users currently playing</button>
+          <button onClick={async () => console.log(await getUsersOauthToken("oauth_spotify"))}>Get users spotify token</button> 
+          <button onClick={async () => console.log(getUsersSpotifyCurrentPlaying())}>Get users currently playing</button>
         </div>
       </SignedIn>
     </main>
