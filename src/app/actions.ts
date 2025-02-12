@@ -18,6 +18,8 @@ export const getUsersOauthToken = async (provider: Provider) => {
 
   const result = await clerk.users.getUserOauthAccessToken(userId, provider)
 
+  console.log(result)
+
   return {
     access: result.data[0]
   }
