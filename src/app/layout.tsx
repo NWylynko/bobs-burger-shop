@@ -1,10 +1,15 @@
 import type { PropsWithChildren } from "react";
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+import { ConvexClientProvider } from "./ConvexClientProvider";
 import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: PropsWithChildren) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <ClerkProvider>
       <html lang="en">
@@ -17,7 +22,7 @@ export default function RootLayout({
               <UserButton />
             </SignedIn>
           </header>
-          {children}
+          <ConvexClientProvider>{children}</ConvexClientProvider>
         </body>
       </html>
     </ClerkProvider>
