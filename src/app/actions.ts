@@ -26,7 +26,7 @@ export const getUsersOauthToken = async (provider: Provider) => {
 }
 
 export const getUsersSpotifyCurrentPlaying = async () => {
-  const { access } = await getUsersOauthToken("oauth_spotify")
+  const { access } = await getUsersOauthToken("spotify")
 
   if (!access) {
     return {

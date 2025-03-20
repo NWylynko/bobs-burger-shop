@@ -10,7 +10,7 @@
   },
   "packageManager": "pnpm@9.7.0",
   "dependencies": {
-    "@clerk/nextjs": "^6.10.3",
+    "@clerk/nextjs": "^6.12.5",
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
